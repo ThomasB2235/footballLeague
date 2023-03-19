@@ -1,0 +1,50 @@
+.fullPage{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+    background: linear-gradient(109.6deg, rgb(15, 12, 42) 11.2%, rgb(11, 132, 145) 91.1%);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "MavenPro";
+
+}
+
+@font-face {
+    font-family: "MavenPro";
+    src: url("src\assets\MavenPro-VariableFont_wght.ttf");
+    
+}   
+h1{
+     text-align: center;
+     padding-top: 100px;
+     font-family: "MavenPro";
+     color: white;
+     font-size: 8vh;
+     width: 60%;
+     margin: auto;
+}
+h2 {
+    text-align: center;
+    color: black;
+}
+
+.carteClub{
+    height: 300px;
+    width: 200px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+
+}
+.illustrationClub {
+
+    height: 100px;
+    width: 180px;
+    border: 1px solid black;
+    margin: auto;
+
+}
