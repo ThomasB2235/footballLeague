@@ -29,22 +29,71 @@ h1{
 }
 h2 {
     text-align: center;
+    font-weight: bolder;
     color: black;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+.liste{
+    margin-top: 50px;
+    max-width : 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .carteClub{
-    height: 300px;
-    width: 200px;
-    border: 1px solid black;
-    background-color: white;
+    border: 5px solid var(--borderColor);
+    border-radius: 20px;
+    height: 400px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.781);
     color: black;
+    margin: 20px;
+
+}
+
+.carteClub:hover{
+    border: 5px solid var(--borderColor);
+    border-radius: 20px;
+    height: 400px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.89);
+    color: black;
+    margin: 20px;
+    
 
 }
 .illustrationClub {
 
-    height: 100px;
-    width: 180px;
-    border: 1px solid black;
+    height: 200px;
+    width: 200px;
     margin: auto;
 
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+ul{
+    padding: 5px;
+    list-style: none;
+    margin: 10px;
+    border: 1px solid var(--borderColor);
+}
+li{
+    margin-bottom: 2px;
+}
+.barre{
+    border: 1px solid black;
+    width: 100px;
+}
+.flexBarre {
+    display: flex;
+    justify-content: space-between;
+}
+.pourcentage {
+    border-right: var(--borderColor);
+    background-color: var(--borderColor);
 }
