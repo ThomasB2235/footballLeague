@@ -7,6 +7,8 @@ import { MapComponent } from './display/map/map.component';
 import { PlayerBoardComponent } from './display/player-board/player-board.component';
 import { PagePrincipaleComponent } from './display/page-principale/page-principale.component';
 import { ChoixEquipeComponent } from './display/choix-equipe/choix-equipe.component';
+import { ChoixJoueursComponent } from './display/choix-joueurs/choix-joueurs.component';
+import { PartieComponent } from './display/partie/partie.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ChoixEquipeComponent } from './display/choix-equipe/choix-equipe.compon
     MapComponent,
     PlayerBoardComponent,
     PagePrincipaleComponent,
-    ChoixEquipeComponent
+    ChoixEquipeComponent,
+    ChoixJoueursComponent,
+    PartieComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,3 @@
-import { Equipe } from "./equipe.model";
-
 export class Club {
 
     constructor(

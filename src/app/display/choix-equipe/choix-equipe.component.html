@@ -1,19 +1,36 @@
 <div class="fullPage">
     <h1> Choississez votre club</h1>
     <div class="liste">
-        <div *ngFor="let club of listeClub">
-            <div class="carteClub"  [style.--borderColor]="club.couleur">
+        <div *ngFor="let club of choixQuatreClubs">
+            <div class="carteClub"  [style.--borderColor]="club.couleur" (click)="choixDujoueur(club)">
                 <h2>{{club.nom}}</h2>
                 <div class="illustrationClub"><img [src]="club.logo" alt="logo"></div>
                 <div class="caracterisitques">
                     <ul>
-                        <li class="flexBarre">Ferveur <div class="barre"><div class="pourcentage" [style.width.px]="club.ferveur">{{club.ferveur}}</div></div></li>
-                        <li class="flexBarre">Fanbase <div class="barre"><div class="pourcentage" [style.width.px]="club.fans">{{club.fans}}</div></div></li>
-                        <li class="flexBarre">Président <div class="barre"><div class="pourcentage" [style.width.px]="club.president">{{club.president}}</div></div></li>
-                        <li class="flexBarre">Coach <div class="barre"><div class="pourcentage" [style.width.px]="club.coach">{{club.coach}}</div></div></li>
+                        <li class="flexBarre">Ferveur 
+                            <div class="barre">
+                                <div class="pourcentage" [style.width.px]="club.ferveur">{{club.ferveur}}</div>
+                            </div>
+                        </li>
+                        <li class="flexBarre">Fanbase 
+                            <div class="barre">
+                                <div class="pourcentage" [style.width.px]="club.fans">{{club.fans}}</div>
+                            </div>
+                        </li>
+                        <li class="flexBarre">Président 
+                            <div class="barre">
+                                <div class="pourcentage" [style.width.px]="club.president">{{club.president}}</div>
+                            </div>
+                        </li>
+                        <li class="flexBarre">Coach 
+                            <div class="barre">
+                                <div class="pourcentage" [style.width.px]="club.coach">{{club.coach}}</div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <div class="debuterPartie"><button (click)="AllerChoixEquipe()">Valider votre club</button></div>
 </div>
