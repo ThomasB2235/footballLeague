@@ -9,7 +9,6 @@ import { Club } from 'src/app/model/club.model';
 })
 export class PartieComponent {
 
-  @Input() club: Club;
   public nomClub : any;
   public listeClub: Array<Club> = [
 

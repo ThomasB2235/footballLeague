@@ -2,7 +2,7 @@
     <h1> Choississez votre club</h1>
     <div class="liste">
         <div *ngFor="let club of choixQuatreClubs">
-            <div class="carteClub"  [style.--borderColor]="club.couleur" (click)="choixDujoueur(club)">
+            <div class="carteClub" [ngClass]="{'active' : (choixClub.nom === club.nom)}" [style.--borderColor]="club.couleur" (click)="choixDujoueur(club)">
                 <h2>{{club.nom}}</h2>
                 <div class="illustrationClub"><img [src]="club.logo" alt="logo"></div>
                 <div class="caracterisitques">

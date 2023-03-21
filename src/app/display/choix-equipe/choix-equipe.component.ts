@@ -22,7 +22,7 @@ export class ChoixEquipeComponent {
     ];
 
     public choixQuatreClubs: any;
-    
+    public choixClub: any = {};
 
     constructor( private router: Router) { }
 
@@ -38,9 +38,18 @@ export class ChoixEquipeComponent {
     }
 
     choixDujoueur(club : Club) {
+      
         
+            if(this.choixClub.nom === club.nom){
+               this.choixClub = {};
+            } else{
+            this.choixClub = club
+            }
+
+
+
         localStorage.setItem('club',club.nom);
-        
+
 
     }
     AllerChoixEquipe() {
