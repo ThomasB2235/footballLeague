@@ -3,6 +3,7 @@ export class Club {
     constructor(
         public nom: string,
         public couleur: string,
+        public sound: string,
         public ferveur: number,
         public logo: string,
         public fans: number,
