@@ -22,6 +22,8 @@ export class ChoixJoueursComponent {
 
 	ngOnInit() {
 
+		console.log(this.listeGK);
+		
 		// Melange des GK
         const shuffled = this.listeGK.sort(() => 0.5 - Math.random());
 
