@@ -1,2 +1,37 @@
-<div class="fullPage"><p>choix-joueurs works!</p> <div class="debuterPartie"><button (click)="debuter()">Valider votre équipe</button></div></div>
-
+<div class="fullPage">
+    <div class="flex">
+        <div class="logoClub"><img [src]="choixClubPlayer.logo" alt="logo"></div>
+        <div class="terrain">
+            <div class="groupeJoueur">
+                <div class="poste">GARDIEN</div>
+                <div class="gk placeJoueur"></div>
+            </div>
+            <div class="groupeJoueur">
+                <div class="poste">DEFENSEUR</div>
+                <div class="def placeJoueur"></div>
+            </div>
+            <div class="groupeJoueur">
+                <div class="poste">DEFENSEUR</div>
+                <div class="def placeJoueur"></div>
+            </div>
+            <div class="groupeJoueur">
+                <div class="poste">MILIEU</div>
+                <div class="mil placeJoueur"></div>
+            </div>
+            <div class="groupeJoueur">
+                <div class="poste">MILIEU</div>
+                <div class="mil placeJoueur"></div>
+            </div>
+            <div class="groupeJoueur">
+                <div class="poste">BUTEUR</div>
+                <div class="bu placeJoueur"></div>
+            </div>
+        </div>
+    </div>
+    <div class="choixPlayer" *ngfor="let goal of choixDeuxGK">
+        <div>{{goal.nom}}</div>
+    </div>
+    <div class="debuterPartie">
+        <button (click)="debuter()">Valider votre équipe</button>
+    </div>
+</div>
