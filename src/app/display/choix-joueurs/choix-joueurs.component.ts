@@ -16,13 +16,11 @@ export class ChoixJoueursComponent {
 	public choixClubPlayer: Club;
 	public listeGK : Array<Joueur> = ENUM.LISTEGK;
 	public choixDeuxGK : any;
-	public choixGK : Joueur;
+	public choixGK : any  = {};
 	constructor(private router: Router) { }
 
 
 	ngOnInit() {
-
-		console.log(this.listeGK);
 		
 		// Melange des GK
         const shuffled = this.listeGK.sort(() => 0.5 - Math.random());
@@ -42,6 +40,23 @@ export class ChoixJoueursComponent {
 		}
 
 
+	}
+
+	choixPlayerGK(gk : Joueur) : boolean{
+
+		if(this.choixGK.nom === gk.nom){
+			this.choixGK = {};
+		 } else{
+		 this.choixGK = gk
+		 }
+
+
+		localStorage.setItem('gk',gk.nom);
+		return true;
+	}
+	validerGK() : boolean {
+
+		return true;
 	}
 
 	debuter() {

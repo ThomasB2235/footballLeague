@@ -18,8 +18,8 @@ export class ENUM {
     public static LISTEGK: Array<Joueur> = [
         { nom: 'Fabio', prenom: 'Luis', image: './assets/img/persos/gk/Fabio.png', age: 34, nationalite: 'Colombien', hygieneVie: 30, mental: 60, attraitFans: 76, qualite: 40, valeur: 10 },
         { nom: 'Kohler', prenom: 'Kevin', image: './assets/img/persos/gk/Kohler.png', age: 25, nationalite: 'Allemand', hygieneVie: 78, mental: 45, attraitFans: 68, qualite: 55, valeur: 20 },
-        { nom: 'Malana', prenom: 'Steeven', image: './assets/img/persos/gk/Malana.png', age: 30, nationalite: '', hygieneVie: 50, mental: 33, attraitFans: 33, qualite: 33, valeur: 13 },
-        { nom: 'VanDerBrook', prenom: 'Ludwig', image: './assets/img/persos/gk/VanDerBrook.png', age: 32, nationalite: 'Hollandais', hygieneVie: 60, mental: 70, attraitFans: 50, qualite: 70, valeur: 18 }
+        { nom: 'Malana', prenom: 'Steeven', image: './assets/img/persos/gk/Malana.png', age: 30, nationalite: 'Français', hygieneVie: 50, mental: 33, attraitFans: 33, qualite: 33, valeur: 13 },
+        { nom: 'VanDerBrook', prenom: 'Ludwig', image: './assets/img/persos/gk/VanderBrook.png', age: 32, nationalite: 'Hollandais', hygieneVie: 60, mental: 70, attraitFans: 50, qualite: 70, valeur: 18 }
     ];
 
     public static LISTEDEF: Array<Joueur> = [

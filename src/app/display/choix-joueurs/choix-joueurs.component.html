@@ -28,9 +28,16 @@
             </div>
         </div>
     </div>
-    <div>Choix du gardien : </div>
-    <div class="choixPlayer" >
-        <div *ngFor="let gk of choixDeuxGK"> {{gk.nom}}</div>
+    <div class="choixposte">GARDIEN</div>
+    <div class="choixPlayer flex" >
+        <div *ngFor="let gk of choixDeuxGK">
+            <div class="carteJoueur" (click)="choixPlayerGK(gk)" [ngClass]="{'active' : (choixGK.nom === gk.nom)}">
+                <div class="imageJoueur"><img src="{{gk.image}}" alt="imageJoueur" class="imgJoueur"></div>
+                <div class="nomJoueur">{{gk.prenom}} {{gk.nom}}</div>
+                <div class="nationAge">{{gk.nationalite}} / {{gk.age}} ans</div>
+            </div>
+        </div>
+        <button (click)="validerGK()">Valider votre gardien</button>
     </div>
     <div class="debuterPartie">
         <button (click)="debuter()">Valider votre équipe</button>
