@@ -21,6 +21,9 @@ export class ChoixJoueursComponent {
 
 
 	ngOnInit() {
+
+		console.log(this.choixGK);
+		
 		
 		// Melange des GK
         const shuffled = this.listeGK.sort(() => 0.5 - Math.random());
@@ -50,13 +53,15 @@ export class ChoixJoueursComponent {
 		 this.choixGK = gk
 		 }
 
-
 		localStorage.setItem('gk',gk.nom);
 		return true;
 	}
 	validerGK() : boolean {
 
 		return true;
+	}
+	afficherGK() {
+		
 	}
 
 	debuter() {
