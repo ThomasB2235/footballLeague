@@ -21,10 +21,12 @@ export class ChoixJoueursComponent {
 	public validerChoixGK: boolean;
 
 	public listeDEF : Array<Joueur> = ENUM.LISTEDEF
-	public choixQuatreDEF : any;
+	public choixQuatreDEF1 : any;
+	public choixQuatreDEF2 : any;
 	public choixDEF1 : any = {};
 	public choixDEF2 : any = {};
-	public validerChoixDEF : boolean;
+	public validerChoixDEF1 : boolean;
+	public validerChoixDEF2 : boolean;
 
 	constructor(private router: Router) { }
 
@@ -37,12 +39,16 @@ export class ChoixJoueursComponent {
 		// Choisir é GK dans le tableau.
 		this.choixDeuxGK = shuffled.slice(0, 2);
 
-		this.validerChoixDEF = true;
+		this.validerChoixDEF1 = true;
 		// Melange des DEF
-		const shuffledDEF = this.listeDEF.sort(() => 0.5 - Math.random());
-		// Choisir é GK dans le tableau.
-		this.choixQuatreDEF = shuffledDEF.slice(0, 4);
+		const shuffledDEF1 = this.listeDEF.sort(() => 0.5 - Math.random());
+		// Choisir du DEF dans le tableau.
+		this.choixQuatreDEF1 = shuffledDEF1.slice(0, 4);
 
+		this.validerChoixDEF2 = true;
+		const shuffledDEF2 = this.listeDEF.sort(() => 0.5 - Math.random());
+		// Choisir du DEF dans le tableau.
+		this.choixQuatreDEF2 = shuffledDEF2.slice(0, 4);
 
 
 		// Recupere le club choisi
@@ -71,7 +77,7 @@ export class ChoixJoueursComponent {
 	}
 	validerGK() {
 		this.validerChoixGK = true;
-		this.validerChoixDEF = false;
+		this.validerChoixDEF1 = false;
 	}
 
 	choixPlayerDEF1(def: Joueur) {
@@ -83,6 +89,22 @@ export class ChoixJoueursComponent {
 		}
 
 		localStorage.setItem('def1', def.nom);
+	}
+
+	validerDEF1() {
+		this.validerChoixDEF1 = true;
+		this.validerChoixDEF2 = false;
+	}
+
+	choixPlayerDEF2(def: Joueur) {
+
+		if (this.choixDEF2.nom === def.nom) {
+			this.choixDEF2 = {};
+		} else {
+			this.choixDEF2 = def;
+		}
+
+		localStorage.setItem('def2', def.nom);
 	}
 
 	debuter() {
