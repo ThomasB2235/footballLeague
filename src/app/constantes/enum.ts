@@ -24,10 +24,10 @@ export class ENUM {
 
     public static LISTEDEF: Array<Joueur> = [
         { nom: 'Bradovic', prenom: 'Lovro', image: './assets/img/persos/def/Bradovic.png', age: 22, nationalite: 'Croate', hygieneVie: 50, mental: 60, attraitFans: 80, qualite: 70, valeur: 30 },
-        { nom: 'Chialo', prenom: 'Lucas', image: './assets/img/persos/def/Chialo.png', age: 34, nationalite: 'Bresilien', hygieneVie: 63, mental: 10, attraitFans: 66, qualite: 80, valeur: 25 },
+        { nom: 'Chialo', prenom: 'Lucas', image: './assets/img/persos/def/LucasChialo.png', age: 34, nationalite: 'Bresilien', hygieneVie: 63, mental: 10, attraitFans: 66, qualite: 80, valeur: 25 },
         { nom: 'Manson', prenom: 'Peter', image: './assets/img/persos/def/Manson.png', age: 31, nationalite: 'Suédois', hygieneVie: 90, mental: 73, attraitFans: 20, qualite: 45, valeur: 12 },
         { nom: 'McNulthy', prenom: 'Brandon', image: './assets/img/persos/def/McNulthy.png', age: 25, nationalite: 'Anglais', hygieneVie: 25, mental: 82, attraitFans: 45, qualite: 63, valeur: 35 },
-        { nom: 'Pronto', prenom: 'Lucas', image: './assets/img/persos/def/McNulthy.png', age: 27, nationalite: 'Italien', hygieneVie: 72, mental: 50, attraitFans: 90, qualite: 73, valeur: 43 },
+        { nom: 'Pronto', prenom: 'Lucas', image: './assets/img/persos/def/Pronto.png', age: 27, nationalite: 'Italien', hygieneVie: 72, mental: 50, attraitFans: 90, qualite: 73, valeur: 43 },
         { nom: 'Vlam', prenom: 'Jaap', image: './assets/img/persos/def/Vlam.png', age: 30, nationalite: 'Hollandais', hygieneVie: 83, mental: 95, attraitFans: 40, qualite: 53, valeur: 33 },
     ];
 

@@ -14,22 +14,36 @@ export class ChoixJoueursComponent {
 	public listeClub: Array<Club> = ENUM.LISTECLUBS;
 	public itemNomClub: any;
 	public choixClubPlayer: Club;
-	public listeGK : Array<Joueur> = ENUM.LISTEGK;
-	public choixDeuxGK : any;
-	public choixGK : any  = {};
+
+	public listeGK: Array<Joueur> = ENUM.LISTEGK;
+	public choixDeuxGK: any;
+	public choixGK: any = {};
+	public validerChoixGK: boolean;
+
+	public listeDEF : Array<Joueur> = ENUM.LISTEDEF
+	public choixQuatreDEF : any;
+	public choixDEF1 : any = {};
+	public choixDEF2 : any = {};
+	public validerChoixDEF : boolean;
+
 	constructor(private router: Router) { }
 
 
 	ngOnInit() {
 
-		console.log(this.choixGK);
-		
-		
+		this.validerChoixGK = false;
 		// Melange des GK
-        const shuffled = this.listeGK.sort(() => 0.5 - Math.random());
+		const shuffled = this.listeGK.sort(() => 0.5 - Math.random());
+		// Choisir é GK dans le tableau.
+		this.choixDeuxGK = shuffled.slice(0, 2);
 
-        // Choisir é GK dans le tableau.
-        this.choixDeuxGK = shuffled.slice(0, 2);
+		this.validerChoixDEF = true;
+		// Melange des DEF
+		const shuffledDEF = this.listeDEF.sort(() => 0.5 - Math.random());
+		// Choisir é GK dans le tableau.
+		this.choixQuatreDEF = shuffledDEF.slice(0, 4);
+
+
 
 		// Recupere le club choisi
 
@@ -45,23 +59,30 @@ export class ChoixJoueursComponent {
 
 	}
 
-	choixPlayerGK(gk : Joueur) : boolean{
+	choixPlayerGK(gk: Joueur) {
 
-		if(this.choixGK.nom === gk.nom){
+		if (this.choixGK.nom === gk.nom) {
 			this.choixGK = {};
-		 } else{
-		 this.choixGK = gk
-		 }
+		} else {
+			this.choixGK = gk;
+		}
 
-		localStorage.setItem('gk',gk.nom);
-		return true;
+		localStorage.setItem('gk', gk.nom);
 	}
-	validerGK() : boolean {
+	validerGK() {
+		this.validerChoixGK = true;
+		this.validerChoixDEF = false;
+	}
 
-		return true;
-	}
-	afficherGK() {
-		
+	choixPlayerDEF1(def: Joueur) {
+
+		if (this.choixDEF1.nom === def.nom) {
+			this.choixDEF1 = {};
+		} else {
+			this.choixDEF1 = def;
+		}
+
+		localStorage.setItem('def1', def.nom);
 	}
 
 	debuter() {

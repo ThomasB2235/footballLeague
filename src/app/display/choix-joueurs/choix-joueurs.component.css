@@ -93,7 +93,7 @@ img {
 }
 .placeJoueur {
   border: 1px solid ;
-  padding-top: 1%;
+  padding-top: 2%;
   height: 200px;
   width: 150px;
   display: flex;
@@ -159,6 +159,7 @@ img {
   width: 120px;
   height: 150px;
   margin-left: 14px;
+  border: 1px solid white;
 }
 .carteChoixJoueur{
   height: 200px;

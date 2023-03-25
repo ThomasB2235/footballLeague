@@ -1,11 +1,17 @@
 <div class="fullPage">
     <div class="flex">
-        <div class="logoClub" [style.--borderColor]="choixClubPlayer.couleur"><img [src]="choixClubPlayer.logo" alt="logo"></div>
+        <div class="logoClub" [style.--borderColor]="choixClubPlayer.couleur"><img [src]="choixClubPlayer.logo"
+                alt="logo"></div>
         <div class="terrain">
             <div class="groupeJoueur">
                 <div class="poste">GARDIEN</div>
-                <div class="gk placeJoueur"><div class="carteChoixJoueur"><img src="{{choixGK.image || './assets/img/persos/default.png'}}" alt="" class="imgChoixJoueur"> <div class="choixNomJoueur">{{choixGK.prenom}}</div><div class="choixNomJoueur">{{choixGK.nom}}</div></div>
-            </div>
+                <div class="gk placeJoueur">
+                    <div class="carteChoixJoueur"><img src="{{choixGK.image || './assets/img/persos/default.png'}}"
+                            alt="" class="imgChoixJoueur">
+                        <div class="choixNomJoueur">{{choixGK.prenom}}</div>
+                        <div class="choixNomJoueur">{{choixGK.nom}}</div>
+                    </div>
+                </div>
             </div>
             <div class="groupeJoueur">
                 <div class="poste">DEFENSEUR</div>
@@ -29,13 +35,24 @@
             </div>
         </div>
     </div>
-    <div class="choixposte">GARDIEN</div>
-    <div class="choixPlayer flex" >
+    <div class="choixposte" *ngIf="validerChoixGK==false">GARDIEN</div>
+    <div class="choixPlayer flex" *ngIf="validerChoixGK==false">
         <div *ngFor="let gk of choixDeuxGK">
             <div class="carteJoueur" (click)="choixPlayerGK(gk)" [ngClass]="{'active' : (choixGK.nom === gk.nom)}">
                 <div class="imageJoueur"><img src="{{gk.image}}" alt="imageJoueur" class="imgJoueur"></div>
                 <div class="nomJoueur">{{gk.prenom}} {{gk.nom}}</div>
                 <div class="nationAge">{{gk.nationalite}} / {{gk.age}} ans</div>
+            </div>
+        </div>
+        <button (click)="validerGK()">Valider votre gardien</button>
+    </div>
+    <div class="choixposte" *ngIf="validerChoixDEF==false">DEFENSEUR</div>
+    <div class="choixPlayer flex" *ngIf="validerChoixDEF==false">
+        <div *ngFor="let def of choixQuatreDEF">
+            <div class="carteJoueur" (click)="choixPlayerDEF1(def)" [ngClass]="{'active' : (choixDEF1.nom === def.nom)}">
+                <div class="imageJoueur"><img src="{{def.image}}" alt="imageJoueur" class="imgJoueur"></div>
+                <div class="nomJoueur">{{def.prenom}} {{def.nom}}</div>
+                <div class="nationAge">{{def.nationalite}} / {{def.age}} ans</div>
             </div>
         </div>
         <button (click)="validerGK()">Valider votre gardien</button>
