@@ -112,12 +112,29 @@ export class ChoixJoueursComponent {
 
 		let index = this.listeDEF.indexOf(this.choixDEF1);
 		console.log(index);
+
+		this.listeDEF.splice(index,1);
 		
-		
+		console.log(this.listeDEF);
 
 		const shuffledDEF2 = this.listeDEF.sort(() => 0.5 - Math.random());
 		// Choisir du DEF dans le tableau.
 		this.choixQuatreDEF2 = shuffledDEF2.slice(0, 4);
+
+	}
+
+	nouvelleListeMil2() {
+
+		let index = this.listeMIL.indexOf(this.choixMIL1);
+		console.log(index);
+
+		this.listeMIL.splice(index,1);
+		
+		console.log(this.listeMIL);
+
+		const shuffledMIL2 = this.listeMIL.sort(() => 0.5 - Math.random());
+		// Choisir du MIL dans le tableau.
+		this.choixQuatreMIL2 = shuffledMIL2.slice(0, 4);
 
 	}
 
@@ -183,6 +200,7 @@ export class ChoixJoueursComponent {
 	validerMIL1() {
 		this.validerChoixMIL1 = true;
 		this.validerChoixMIL2 = false;
+		this.nouvelleListeMil2();
 	}
 
 	choixPlayerMIL2(mil: Joueur) {
