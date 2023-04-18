@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
-import { ChoixEquipeComponent } from '../choix-equipe/choix-equipe.component';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-page-principale',
@@ -8,13 +7,12 @@ import { ChoixEquipeComponent } from '../choix-equipe/choix-equipe.component';
 	styleUrls: ['./page-principale.component.css']
 })
 export class PagePrincipaleComponent {
-	constructor(private route: ActivatedRoute, private router: Router) {
 
-	}
+	constructor(private router: Router) {}
+
 	public debuterPartie() {
-		console.log('test');
-		
-this.router.navigate(['/choixEquipe']);
+
+		this.router.navigate(['/choixEquipe']);
 
 	}
 }

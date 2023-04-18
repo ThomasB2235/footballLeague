@@ -32,18 +32,18 @@ export class ENUM {
     ];
 
     public static LISTEMIL: Array<Joueur> = [
-        { nom: 'Fabio', prenom: 'Luis', image: '', age: 34, nationalite: 'Colombien', hygieneVie: 30, mental: 60, attraitFans: 76, qualite: 40, valeur: 10 },
-        { nom: '', prenom: '', image: '', age: 34, nationalite: '', hygieneVie: 33, mental: 33, attraitFans: 33, qualite: 33, valeur: 33 },
-        { nom: '', prenom: '', image: '', age: 34, nationalite: '', hygieneVie: 33, mental: 33, attraitFans: 33, qualite: 33, valeur: 33 },
-        { nom: '', prenom: '', image: '', age: 34, nationalite: '', hygieneVie: 33, mental: 33, attraitFans: 33, qualite: 33, valeur: 33 },
-        { nom: '', prenom: '', image: '', age: 34, nationalite: '', hygieneVie: 33, mental: 33, attraitFans: 33, qualite: 33, valeur: 33 },
-        { nom: '', prenom: '', image: '', age: 34, nationalite: '', hygieneVie: 33, mental: 33, attraitFans: 33, qualite: 33, valeur: 33 },
+        { nom: 'Amirana', prenom: 'Bernardo', image: './assets/img/persos/mil/Amirana.png', age: 18, nationalite: 'Francais', hygieneVie: 70, mental: 60, attraitFans: 56, qualite: 70, valeur: 50 },
+        { nom: 'Cho', prenom: 'Son', image: './assets/img/persos/mil/Cho Son.png', age: 28, nationalite: 'Coréen', hygieneVie: 93, mental: 33, attraitFans: 45, qualite: 83, valeur: 35 },
+        { nom: 'Davot', prenom: 'Filipo', image: './assets/img/persos/mil/Davot.png', age: 24, nationalite: 'Italien', hygieneVie: 15, mental: 83, attraitFans: 90, qualite: 52, valeur: 25 },
+        { nom: 'O Reilly', prenom: 'Mark', image: './assets/img/persos/mil/OReilly.png', age: 32, nationalite: 'Irlandais', hygieneVie: 30, mental: 95, attraitFans: 75, qualite: 55, valeur: 13 },
+        { nom: 'Rookie', prenom: 'Lorenzo', image: './assets/img/persos/mil/Rookie.png', age: 27, nationalite: 'Américain', hygieneVie: 10, mental: 71, attraitFans: 82, qualite: 30, valeur: 20 },
+        { nom: 'Ryan', prenom: 'Luke', image: './assets/img/persos/mil/Ryan.png', age: 20, nationalite: 'Anglais', hygieneVie: 66, mental: 45, attraitFans: 70, qualite: 80, valeur: 65 },
 
     ];
     public static LISTEBU: Array<Joueur> = [
-        { nom: 'Fabio', prenom: 'Luis', image: '', age: 34, nationalite: 'Colombien', hygieneVie: 30, mental: 60, attraitFans: 76, qualite: 40, valeur: 10 },
-        { nom: '', prenom: '', image: '', age: 34, nationalite: '', hygieneVie: 33, mental: 33, attraitFans: 33, qualite: 33, valeur: 33 },
-        { nom: '', prenom: '', image: '', age: 34, nationalite: '', hygieneVie: 33, mental: 33, attraitFans: 33, qualite: 33, valeur: 33 },
-        { nom: '', prenom: '', image: '', age: 34, nationalite: '', hygieneVie: 33, mental: 33, attraitFans: 33, qualite: 33, valeur: 33 },
+        { nom: 'Benaldo', prenom: 'Luis', image: './assets/img/persos/bu/Benaldo.png', age: 25, nationalite: 'Brésilien', hygieneVie: 45, mental: 50, attraitFans: 95, qualite: 95, valeur: 70 },
+        { nom: 'Cagolla', prenom: 'Rémi', image: './assets/img/persos/bu/Cagolla.png', age: 30, nationalite: 'Francais', hygieneVie: 70, mental: 36, attraitFans: 75, qualite: 59, valeur: 15 },
+        { nom: 'Ivona', prenom: 'Moussa', image: './assets/img/persos/bu/Ivona.png', age: 28, nationalite: 'Ivoirien', hygieneVie: 75, mental: 75, attraitFans: 25, qualite: 70, valeur: 50 },
+        { nom: 'Smith', prenom: 'Harry', image: './assets/img/persos/bu/Smith.png', age: 22, nationalite: 'Anglais', hygieneVie: 80, mental: 80, attraitFans: 30, qualite: 65, valeur: 62 },
     ]
 }

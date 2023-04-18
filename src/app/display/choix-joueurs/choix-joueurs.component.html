@@ -35,15 +35,33 @@
             </div>
             <div class="groupeJoueur">
                 <div class="poste">MILIEU</div>
-                <div class="mil placeJoueur"></div>
+                <div class="mil placeJoueur">
+                    <div class="carteChoixJoueur"><img src="{{choixMIL1.image || './assets/img/persos/default.png'}}"
+                        alt="" class="imgChoixJoueur">
+                    <div class="choixNomJoueur">{{choixMIL1.prenom}}</div>
+                    <div class="choixNomJoueur">{{choixMIL1.nom}}</div>
+                </div>
+                </div>
             </div>
             <div class="groupeJoueur">
                 <div class="poste">MILIEU</div>
-                <div class="mil placeJoueur"></div>
+                <div class="mil placeJoueur">
+                    <div class="carteChoixJoueur"><img src="{{choixMIL2.image || './assets/img/persos/default.png'}}"
+                        alt="" class="imgChoixJoueur">
+                    <div class="choixNomJoueur">{{choixMIL2.prenom}}</div>
+                    <div class="choixNomJoueur">{{choixMIL2.nom}}</div>
+                </div>
+                </div>
             </div>
             <div class="groupeJoueur">
                 <div class="poste">BUTEUR</div>
-                <div class="bu placeJoueur"></div>
+                <div class="bu placeJoueur">
+                    <div class="carteChoixJoueur"><img src="{{choixBU.image || './assets/img/persos/default.png'}}"
+                        alt="" class="imgChoixJoueur">
+                    <div class="choixNomJoueur">{{choixBU.prenom}}</div>
+                    <div class="choixNomJoueur">{{choixBU.nom}}</div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -79,9 +97,46 @@
                 <div class="nationAge">{{def.nationalite}} / {{def.age}} ans</div>
             </div>
         </div>
-        <button (click)="validerDEF1()">Valider votre défenseur</button>
+        <button (click)="validerDEF2()">Valider votre défenseur</button>
     </div>
-    <div class="debuterPartie">
+
+    <div class="choixposte" *ngIf="validerChoixMIL1==false">MILIEU</div>
+    <div class="choixPlayer flex" *ngIf="validerChoixMIL1==false">
+        <div *ngFor="let mil of choixQuatreMIL1">
+            <div class="carteJoueur" (click)="choixPlayerMIL1(mil)" [ngClass]="{'active' : (choixMIL1.nom === mil.nom)}">
+                <div class="imageJoueur"><img src="{{mil.image}}" alt="imageJoueur" class="imgJoueur"></div>
+                <div class="nomJoueur">{{mil.prenom}} {{mil.nom}}</div>
+                <div class="nationAge">{{mil.nationalite}} / {{mil.age}} ans</div>
+            </div>
+        </div>
+        <button (click)="validerMIL1()">Valider votre milieu</button>
+    </div>
+
+    <div class="choixposte" *ngIf="validerChoixMIL2==false">MILIEU</div>
+    <div class="choixPlayer flex" *ngIf="validerChoixMIL2==false">
+        <div *ngFor="let mil of choixQuatreMIL2">
+            <div class="carteJoueur" (click)="choixPlayerMIL2(mil)" [ngClass]="{'active' : (choixMIL2.nom === mil.nom)}">
+                <div class="imageJoueur"><img src="{{mil.image}}" alt="imageJoueur" class="imgJoueur"></div>
+                <div class="nomJoueur">{{mil.prenom}} {{mil.nom}}</div>
+                <div class="nationAge">{{mil.nationalite}} / {{mil.age}} ans</div>
+            </div>
+        </div>
+        <button (click)="validerMIL2()">Valider votre milieu</button>
+    </div>
+
+    <div class="choixposte" *ngIf="validerChoixBU==false">BUTEUR</div>
+    <div class="choixPlayer flex" *ngIf="validerChoixBU==false">
+        <div *ngFor="let bu of choixDeuxBU">
+            <div class="carteJoueur" (click)="choixPlayerBU(bu)" [ngClass]="{'active' : (choixBU.nom === bu.nom)}">
+                <div class="imageJoueur"><img src="{{bu.image}}" alt="imageJoueur" class="imgJoueur"></div>
+                <div class="nomJoueur">{{bu.prenom}} {{bu.nom}}</div>
+                <div class="nationAge">{{bu.nationalite}} / {{bu.age}} ans</div>
+            </div>
+        </div>
+        <button (click)="validerBU()">Valider votre buteur</button>
+    </div>
+
+    <div class="debuterPartie" *ngIf="validerEquipe==true">
         <button (click)="debuter()">Valider votre équipe</button>
     </div>
 </div>
